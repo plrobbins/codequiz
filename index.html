@@ -10,4 +10,27 @@
     <!--Link to Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+<body>
+    <!--Nav header with timer inside-->
+    <nav class="header">
+        <div class="card">
+            <a type="button" id="score" onclick="highScore()">View High Scores</a>
+            <a id="timer"></a>
+        </div>
+    </nav>
+
+    <!--Container-->
+    <div class="container">
+
+        <!--Quiz Page-->
+        <div id="codeQuiz">
+            <h1 id="start">Coding Quiz Challenge</h1>
+            <p id="instructions">Try to answer the following questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <div id="button">
+                <button id="submitButton" class="btn active" type="button">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+<!--Quiz Questions-->
+</body>
 </html>
