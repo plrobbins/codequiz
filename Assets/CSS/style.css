@@ -1,0 +1,44 @@
+/* Page Styling */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 150px;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bold;
+}
+p {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+#button {
+    text-align: center;
+}
+button {
+    text-align: center;
+    color: white;
+    background-color: #8a2be2;
+    border-color: blueviolet;
+}
+
+/* Nav Header */
+#timer {
+    float: right;
+    padding-right: 30px;
+}
+
+#score {
+    color: blueviolet;
+    padding-right: 20px;
+}
