@@ -42,3 +42,12 @@ button {
     color: blueviolet;
     padding-right: 20px;
 }
+/* Quiz Page */
+.codeQuiz {
+    align-items: center;
+    text-align: center;
+}
+#questionHeader {
+    font-size: 30px;
+    font-weight: bold;
+}
