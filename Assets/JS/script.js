@@ -36,7 +36,7 @@ submitButton.addEventListener("click", function() {
 
   //Initial button for high score
 formButton.addEventListener("click", function() { 
-    highScores();
+    highScore();
     console.log("initial button")
 })  
 
@@ -223,3 +223,4 @@ var localStorageArray = { score: secondsLeft, initials: getInitials };
 var highScores = getInitials + ": " + secondsLeft;  
 $("#highScoreList").append(highScores)
 }
+
