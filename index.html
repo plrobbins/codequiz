@@ -14,7 +14,7 @@
     <!--Nav header with timer inside-->
     <nav class="header">
         <div class="card">
-            <a type="button" id="score" onclick="highScore()">View High Scores</a>
+            <!-- <a type="button" id="score" onclick="highScore()">View High Scores</a> -->
             <a id="timer"></a>
         </div>
     </nav>
@@ -40,6 +40,8 @@
                 <li><button type="button" class="btn questionButton" id="three"></button></li>
                 <li><button type="button" class="btn questionButton" id="four"></button></li>
             </ul>
+
+            <div id="correctResponse"></div>
         </div>
     <!--Score Page-->
         <div id="scorePage">
@@ -59,7 +61,8 @@
             <h2 id="highScore">Highscore</h2>
             <p id="highScoreList"></p>
            <div class="col-sm-12 text-center">
-               <button id="goBack" class="btn" value="reset-form" type="button">Clear High Score</button>
+               <button id="goBack" class="btn" type="button">Go Back</button></a>
+               <button id="clearHighScore" class ="btn" value="reset-form" type="button">Clear High Score</button>
            </div>
         </div>
     </div>

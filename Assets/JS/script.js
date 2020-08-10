@@ -75,4 +75,44 @@ function quizChallenge() {
     header.style.display = "block";
     questionPage.style.display = "none";
     scorePage.style.display = "none";
+
+    var startScore = 0;
+    timer.textContent = "Time: " + startScore;
+}
+
+//Reset score when restarting the quiz
+function resetVariables() {
+    startScore = 0;
+    questionIndex = 0;
+}
+
+//Beginning of the quiz
+function startQuiz () {
+    codeQuiz.style.display = "none";
+    questionPage.style.display = "none";
+
+    secondsLeft = 80;
+
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        timer.textContent = "Time: " + secondsLeft;
+        if (secondsLeft === 0 || quizQuestions.length === questionIndex) {
+            clearInterval(timerInterval);
+            showFinalSCore();
+        }
+    }, 1000);
+}
+
+//Display questions
+function showQuestions() {
+    var q = quizQuestions[questionsIndex];
+    questionHeader.innerHTML = q.questionHeader;
+    answer1.innerHTML = q.one;
+    answer1.setAttribute("data-answer", q.one);
+    answer2.innerHTML = q.two;
+    answer2.setAttribute("data-answer", q.two);
+    answer3.innerHTML = q.three;
+    answer3.setAttribute("data-answer", q.three);
+    answer4.innerHTML = q.four;
+    answer4.setAttribute("data-answer", q.four);
 }
