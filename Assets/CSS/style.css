@@ -51,3 +51,13 @@ button {
     font-size: 30px;
     font-weight: bold;
 }
+
+/*Quiz Challenge Page*/
+#codeQuiz {
+    align-items: center;
+    text-align: center;
+}
+#questionHeader {
+    font-size: 25px;
+    font-weight: bold;
+}

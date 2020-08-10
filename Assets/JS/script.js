@@ -34,25 +34,7 @@ submitButton.addEventListener("click", function() {
     console.log("start")
 })
 
-  //Initial button for high score
-formButton.addEventListener("click", function() { 
-    highScore();
-    console.log("initial button")
-})  
-
-//Clear high score
-clearHighScore.addEventListener("click", function() {
-    localStorage.clear();
-})
-
-//Go back button
-goBack.addEventListener("click", function() { 
-    $("#highScoreList").empty() 
-    $("#initialInput").val("") 
-    resetVariables()
-    quizChallenge();
-    console.log("restart quiz")
-})
+  
 
 //Question Array
 var quizQuestions = [
@@ -223,4 +205,24 @@ var localStorageArray = { score: secondsLeft, initials: getInitials };
 var highScores = getInitials + ": " + secondsLeft;  
 $("#highScoreList").append(highScores)
 }
+
+//Initial button for high score
+formButton.addEventListener("click", function() { 
+    highScore();
+    console.log("initial button")
+})  
+
+//Clear high score
+clearHighScore.addEventListener("click", function() {
+    localStorage.clear();
+})
+
+//Go back button
+goBack.addEventListener("click", function() { 
+    $("#highScoreList").empty() 
+    $("#initialInput").val("") 
+    resetVariables()
+    quizChallenge();
+    console.log("restart quiz")
+})
 
