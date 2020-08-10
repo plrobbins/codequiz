@@ -68,3 +68,11 @@ var quizQuestions = [
 ]
 var startScore = 0
 var questionIndex = 0
+
+//Main Page
+function quizChallenge() {
+    codeQuiz.style.display = "block";
+    header.style.display = "block";
+    questionPage.style.display = "none";
+    scorePage.style.display = "none";
+}
