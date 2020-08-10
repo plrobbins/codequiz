@@ -16,7 +16,7 @@ var questionButton = document.getElementById(".questionButton");
 
 var codeQuiz = document.getElementById("codeQuiz");
 var scorePage = document.getElementById("scorePage");
-var highScoreButton = document.getElementById("highSCoreButton");
+var highScoreButton = document.getElementById("highScoreButton");
 
 var formButton = document.getElementById("formButton");
 var initials = document.getElementById("initials");
@@ -27,11 +27,32 @@ var allDoneButton = document.getElementById("form-inline");
 
 var timer = document.getElementById("timer");
 
+quizChallenge();
 // Start quiz
 submitButton.addEventListener("click", function() { 
     startQuiz()
     console.log("start")
-  })
+})
+
+  //Initial button for high score
+formButton.addEventListener("click", function() { 
+    highScores();
+    console.log("initial button")
+})  
+
+//Clear high score
+clearHighScore.addEventListener("click", function() {
+    localStorage.clear();
+})
+
+//Go back button
+goBack.addEventListener("click", function() { 
+    $("#highScoreList").empty() 
+    $("#initialInput").val("") 
+    resetVariables()
+    quizChallenge();
+    console.log("restart quiz")
+})
 
 //Question Array
 var quizQuestions = [
@@ -104,7 +125,7 @@ function startQuiz () {
         timer.textContent = "Time: " + secondsLeft;
         if (secondsLeft === 0 || quizQuestions.length === questionIndex) {
             clearInterval(timerInterval);
-            showFinalSCore();
+            showFinalScore();
         }
     }, 1000);
 }
@@ -159,7 +180,7 @@ function checkAnswer(event) {
     }
 
     if (quizQuestions.length === questionIndex+1) {
-     showFinalSCore();
+     showFinalScore();
      return;
     }
     questionIndex++;
@@ -182,7 +203,7 @@ function showFinalScore() {
 
 var highScoreArray = []
 //Display high score
-function showHighScores() {
+function highScore() {
     header.style.display = "none";
     allDone.style.display = "none";
     finalScore.style.display = "none";
