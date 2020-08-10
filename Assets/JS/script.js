@@ -183,5 +183,22 @@ function showFinalScore() {
 var highScoreArray = []
 //Display high score
 function showHighScores() {
-    
+    header.style.display = "none";
+    allDone.style.display = "none";
+    finalScore.style.display = "none";
+    initials.style.display = "none"
+    formButton.style.display = "none"
+    highScoreButton.style.display = "block";   
+
+
+var getInitials = document.getElementById("initialInput").value;
+
+var highScoreArray = JSON.parse(localStorage.getItem("highScore")) || [];
+
+var localStorageArray = { score: secondsLeft, initials: getInitials };
+  highScoreArray.push(localStorageArray)
+  localStorage.setItem("highScore", JSON.stringify(highScoreArray));
+
+var highScores = getInitials + ": " + secondsLeft;  
+$("#highScoreList").append(highScores)
 }
