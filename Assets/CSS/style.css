@@ -28,7 +28,7 @@ p {
 button {
     text-align: center;
     color: white;
-    background-color: #8a2be2;
+    background-color: lavender;
     border-color: blueviolet;
 }
 
@@ -60,4 +60,40 @@ button {
 #questionHeader {
     font-size: 25px;
     font-weight: bold;
+}
+#correctResponse {
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+}
+/*Final Score*/
+#finalScore {
+    padding-left: 15%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+#highScore {
+    text-align: left;
+    padding-top: 75px;
+    font-weight: bold;
+}
+#highScoreList {
+    background-color: lavender;
+    font-size: 20px;
+    padding-right: 75%;
+}
+#highScoreButton {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.row {
+    align-items: center;
+    text-align: center;
+}
+
+#allDone {
+    font-weight: bold;
+    padding-top: 50px;
 }
