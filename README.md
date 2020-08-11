@@ -1,5 +1,5 @@
 # Code Quiz
-This assignment will create a code quiz. The code quiz is timed and has multiple choic questions. 
+This assignment will create a code quiz. The code quiz is timed and has multiple choice questions. 
 
 # Purpose
 This code quiz will test my skills using Javascript funadamentals. The code quiz should contain the following information:
